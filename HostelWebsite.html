@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="C:/Users/vidya/Desktop/bootstrap/bootstrap/css/bootstrap.css">
+    <script src="C:/Users/vidya/Desktop/bootstrap/bootstrap/js/bootstrap.js"></script>
+    <script src="C:/Users/vidya/Desktop/bootstrap/bootstrap/js/jquery.js"></script>
+    <script src="C:/Users/vidya/Desktop/bootstrap/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        /*register display r none code*/
+        function myF(){
+           document.getElementById("pop").style.display="block";
+        }
+        function myC(){
+            document.getElementById('pop').style.display="none";
+        }
+        /*booking code*/
+         function myV(){
+             var fName = document.getElementById('fName').value;
+             var lName = document.getElementById('lName').value;
+             var email = document.getElementById('email').value;
+             var sin = document.getElementById('sin').value;
+             var two = document.getElementById('two').value;
+             var four = document.getElementById('four').value;
+             var six = document.getElementById('six').value;
+             var date1 = document.getElementById('date1').value;
+             var time1 = document.getElementById('time1').value;
+             var date2 = document.getElementById('date2').value;
+             var time2 = document.getElementById('time2').value;
+                   if(fName ==""){
+                       alert("Please fill First Name");
+                   }else if(lName ==""){
+                    alert("Please fill Last Name");
+                   }else if(email ==""){
+                       alert("Please fill Email");
+                   }else if(date1==""){
+                       alert("Please select Arriving Date");
+                   }else if(time1==""){
+                       alert("Please select Arriving time");
+                   }else if(date2==""){
+                       alert("Please select Departure Date");
+                   }else if(time2==""){
+                       alert("Please select Departure time");
+                   }else{
+                       alert("Your Room has booked!!!!....Thankyou");
+                   }
+             }
+            /* bars caode*/
+            function myMenu(){
+                document.getElementById('menu').style.width="100%";
+                document.getElementById('menu').style.right="0";
+                document.getElementById('menu').style.opacity="1";
+                document.getElementById('menu').style.height="600px";
+                document.getElementById('mi').style.display="block";
+
+                
+            }
+            function myC4(){
+                document.getElementById('menu').style.width='0';
+                document.getElementById('menu').style.right='100%';
+                document.getElementById('menu').style.opacity="0";
+                document.getElementById('menu').style.height="0";
+                //document.getElementById('menu').style.display='none';
+            }
+    </script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+        }
+        .back{
+            float:right;
+            width:110px;
+            height:40px;
+            font-size: 20px;
+            color:black;
+            background-color: white;
+            margin:20px;
+            border:none;
+            outline:none;
+            box-shadow: 2px 2px 5px white;
+            border-radius:10px;
+        }
+        .back1{
+            color:black;
+            font-weight: bold;
+        }
+        .head{
+            width:100%;
+            height:40px;
+            background-color:rgb(9, 247, 235);
+            box-sizing: border-box;
+        }
+        .address{
+            list-style-type: none;
+            float:left;
+            padding:5px;
+        }
+        .add-li{
+            display:inline;
+            padding:10px;
+        }
+        .numb{
+            color:black;
+        }
+        .address1{
+            list-style-type: none;
+            padding:5px;
+            float:right;
+            margin-right: 50px;
+        }
+        .icon{
+            color:rgb(5, 5, 58);
+            font-size:16px;
+            text-shadow: 3px 3px 5px #333;
+        }
+        .navbar1{
+            width:100%;
+            height:80px;
+            margin-top: 0;
+            background-color: #333;
+            box-sizing: border-box;
+        }
+        .navbar-nav1{
+            margin-right:25px;
+            list-style-type: none;
+            float:right;
+            padding-top:19px;
+        }
+        .nav-item1{
+            display:inline;
+           padding:15px;
+        }
+        .nav-link1{
+            color:white;
+            font-size: 18px;
+            
+        }
+        .fa-bars{
+           font-size:larger;
+           padding-top:5px;
+        }
+        
+        .logo{
+            color:white;
+            position:absolute;
+            top:46px;
+            left:55px;
+            font-size:45px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        img{
+            opacity: 1;
+        }
+        .h1{
+            position: absolute;
+            top:190px;
+            left:500px;
+        }
+        .heading{
+            color:black;
+            font-size:70px;
+            text-align: center;
+            text-shadow: 2px 2px 5px #333,3px 3px 10px #333;
+        }
+        .para{
+            font-size: 30px;
+            color:#333;
+            text-align: center;
+        }
+        .book{
+            width:350px;
+            height:50px;
+            text-align: center;
+            font-size:30px;
+            padding:6px;
+            background-color:brown;
+            color:white;
+            font-weight: bold;
+            outline:none;
+            border:none;
+            border-radius:20px;
+            box-shadow: 2px 2px 5px #333,0px 0px 20px #333;
+        }
+        .book:focus{
+            outline:none;
+        }
+        .popup{
+            position:absolute;
+            z-index:1;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            width:100%;
+            height:100%;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.8);
+            display:none;
+        }
+         .popup-box{
+             margin:100px 495px;
+             width:550px;
+             height:600px;
+             background-color:white;
+             box-sizing: border-box;
+             box-shadow: 2px 2px 10px #888, 0px 0px 20px #333;
+             transition: 0.4s ease;
+             animation: pop 0.4s;
+             animation-fill-mode: forwards;
+         }
+         @keyframes pop{
+             from{margin-top:0px;}
+             to{margin-top:95px;}
+         }
+         .popup-header{
+             width:100%;
+             height:60px;
+             background-color: brown;
+             box-sizing: border-box;
+         }
+         .cls{
+             float:right;
+             margin: 0px 20px;
+             color:white;
+             font-weight: bolder;
+             font-size: 30px;
+             cursor: pointer;
+         }
+         .header{
+             float:left;
+             margin:3px;
+             padding:7px;
+             color:white;
+         }
+         .popup-body{
+             width:100%;
+             height:540px;
+             background-size:cover;
+             position: relative;
+         }
+          .p-tb{
+              margin:14px 40px;
+          }
+          .p-tr,.p-td{
+              padding:15px;
+          }
+          .p-lb{
+              font-size: 20px;
+              font-weight: bold;
+              color:rgb(13, 13, 41);
+          }
+          .p-in{
+              width:400px;
+              height:32px;
+              border: 2px solid grey;
+          }
+          .eye{
+              position: absolute;
+              top:256px;
+              left:409px;
+              cursor: pointer;
+          }
+          .eye1{
+              position: absolute;
+              top:326px;
+              left:409px;
+              cursor: pointer;
+          }
+          .reg{
+              width:200px;
+              height:43px;
+              background-color: rgb(10, 10, 59);
+              color:white;
+              font-weight: bold;
+              padding:5px;
+              text-align: center;
+              font-size: 23px;
+              border:none;
+              outline:none;
+              border-radius:5px;
+              box-shadow: 3px 3px 5px #333,3px 3px 10px #333;
+          }
+         .about{
+             width:100%;
+             height:750px;
+             background-color:white;
+         }
+         .about-header{
+             width:100%;
+             height:90px;
+             background-color: black;
+             color:white;
+             text-align: center;
+             box-sizing: border-box;
+             padding-top:10px;
+             font-size: 50px;
+             font-family: cursive;
+             text-shadow: 2px 2px 5px white;
+             letter-spacing: 2px;
+         }
+         .about-body{
+             display:flex;
+             margin:60px 170px;
+         }
+        
+         .us{
+             margin:15px;
+             padding:15px;
+             width:350px;
+             height:510px;
+             background-color:white;
+             box-shadow: 2px 2px 5px #333,3px 3px 18px #333;
+         }
+         .man{
+             padding:8px;
+         }
+         .man1{
+             padding-left:7px;
+             
+         }
+         .services{
+             width:100%;
+             height:1200px;
+         }
+         .services-header{
+             width:100%;
+             height:80px;
+             color:white;
+             background-color: black;
+             text-align: center;
+             box-sizing: border-box;
+             padding-top:3px;
+             font-size: 50px;
+             font-family: cursive;
+             text-shadow: 2px 2px 3px white;
+             letter-spacing: 2px;
+         }
+        .services-items{
+            width:100%;
+            height:200px;
+            background-color: rgb(214, 208, 208);
+            box-sizing: border-box;
+            border-bottom: 1px solid #333;
+        }
+        .services-items:hover{
+            background-color: black;
+            color:white;
+        }
+        .services-heading{
+            padding:10px;
+            box-sizing: border-box;
+            float:left;
+        }
+        .services-para{
+            padding-left:10px;
+            font-style: italic;
+        }
+        .s-img{
+            margin:10px;
+            float:right;
+        }
+        .gallery{
+            width:100%;
+            height:750px;
+        }
+        .gallery-header{
+            width:100%;
+             height:80px;
+             color:white;
+             background-color: black;
+             text-align: center;
+             box-sizing: border-box;
+             padding-top:3px;
+             font-size: 50px;
+             font-family: cursive;
+             text-shadow: 2px 2px 3px white;
+             letter-spacing: 3px;
+        }
+        .gallery-cards{
+            display:flex;
+            flex-wrap: wrap;
+            margin: 10px 65px;
+        }
+        .g-card{
+            width:300px;
+            height:300px;
+            box-shadow: 2px 2px 8px #333,3px 3px 20px #333;
+            margin: 10px 20px;
+        }
+        .g-card:hover{
+            border: 1px solid red;
+            box-shadow: 5px 5px 10px red;
+        }
+        .g-img{
+            width:100%;
+            height:220px;
+        }
+        .g-header{
+            margin: 1px 4px;
+            text-align: center;
+        }
+        .g-para{
+            font-style: italic;
+            margin: 0px 5px;
+            text-align: center;
+        }
+        .booking{
+            width:100%;
+            height:750px;
+        }
+        .booking-header{
+            width:100%;
+             height:80px;
+             color:white;
+             background-color: black;
+             text-align: center;
+             box-sizing: border-box;
+             padding-top:3px;
+             font-size: 50px;
+             font-family: cursive;
+             text-shadow: 2px 2px 3px white; 
+             letter-spacing: 2px;
+        }
+        .booking-body{
+            width:100%;
+            height:690px;
+            background-color:white;
+        }
+       .b-para{
+           float:left;
+           margin:30px 50px;
+           color:black;
+           font-weight: bold;
+           font-size: 25px;
+       }
+       .b-input{
+           font-size: medium;
+           width:400px;
+           height:34px;
+       }
+       .b-para1{
+           margin:15px 50px;
+           color:black;
+           font-size:21px;
+           font-weight: bolder;
+           padding:10px;
+       }
+       .dt{
+           width:200px;
+           height:29px;
+           padding:10px;
+       }
+       .book1{
+           text-align: center;
+           width:200px;
+           height:50px;
+           background-color: brown;
+           color:white;
+           border:none;
+           outline:none;
+           border-radius: 10px;
+           font-weight: bold;
+           font-size: 25px;
+           padding:5px;
+           box-shadow: 2px 2px 5px #333,2px 2px 10px #333;
+       }
+       .contact{
+           width:100%;
+           height:750px;
+       }
+       .contact-header{
+           width:100%;
+           height:80px;
+             color:white;
+             background-color: black;
+             text-align: center;
+             box-sizing: border-box;
+             padding-top:3px;
+             font-size: 50px;
+             font-family: cursive;
+             text-shadow: 2px 2px 3px white;
+             letter-spacing: 2px; 
+       }
+       .contact-body{
+           width:100%;
+           height:500px;
+           background: url("C:/Users/vidya/Desktop/images/hostel.jpg") no-repeat center ;
+           background-size: cover;
+           position: relative;
+           box-sizing: border-box;
+       }
+       .contact-form{
+           width:100%;
+           height:100%;
+           background-color: rgb(0,0,0);
+           background-color: rgba(0,0,0,0.7);
+           z-index:1;
+           box-sizing:border-box;
+       }
+       .tf,.td{
+           margin:2px;
+           padding:10px;
+       }
+       .conf{
+           width:400px;
+           height:35px;
+           line-height: 1px;
+       }
+       .conf1{
+           width:400px;
+           height:40px;
+           line-height: 1px;
+           background-color: rgb(61, 138, 61);
+           color:white;
+           text-align: center;
+           padding:5px;
+           font-weight: bold;
+           font-size: 25px;
+           border:none;
+           outline: none;
+           border-radius:5px;
+           box-shadow: 3px 3px 5px #333;
+           cursor: pointer;
+       }
+       .lab{
+           color:white;
+           font-weight: lighter;
+           font-size: 25px;
+       }
+       .contact-footer{
+           width:100%;
+           height:180px;
+           background-color:black;
+       }
+       .rate{
+           color:white;
+           padding:10px;
+       }
+       .done{
+           width:100px;
+           height:35px;
+           color:gold;
+           background-color: green;
+           padding:3px;
+           outline:none;
+           border-radius:5px;
+           border:none;
+       }
+       .fa-bars{
+           font-size:20px;
+           font-weight: bolder;
+           float:right;
+       }
+       .menu{
+           position:absolute;
+           z-index:1;
+           top:120px;
+           right:100%;
+           width:0;
+           height:0;
+           background-color:black;
+           background-color: rgb(0,0,0,0.8);
+           transition:0.5s ease;
+           opacity:0;
+           /*display:none;*/
+       }
+      .menu-header{
+          width:100%;
+          height:80px;
+          border-bottom: 1px solid rgb(172, 169, 169);
+          background-color: black;
+      }
+      .menu-title{
+          text-align: center;
+          color:white;
+          padding:20px;
+          font-weight: bold;
+      }
+      .close4{
+          float:left;
+          padding:10px;
+          font-size:30px;
+          font-weight: bolder;
+          color:white;
+          cursor: pointer;
+      }
+      .menu-items{
+          width:100%;
+          height:600px;
+          display:none;
+      }
+      .menu-tr{
+         color:white;
+      }
+      .menu-th{
+          color:white;
+          margin: 5px 70px;
+          padding:10px 70px;
+          font-size:30px;
+          font-weight:bolder;
+          text-align: center;
+      }
+      .tms{
+          font-size:13px;
+          color:red;
+          font-style: italic;
+          text-decoration: none;
+      }
+      .menu-td{
+          color:white;
+          text-align: center;
+          font-size:21px;
+          font-style: italic;
+          padding-top:20px;
+          font-weight: lighter;
+      }
+      /*register-account*/
+      .account{
+          position:absolute;
+          z-index: 1;
+          top:0;
+          left:0;
+          width:100%;
+          height:730px;
+          background-color:rgb(6, 6, 48);
+          display:none;
+          opacity:0;
+      }
+      .a-details{
+          float:left;
+          width:300px;
+          height:730px;
+          border:1px solid white;
+          background-color:rgb(6, 29, 44);
+      }
+      .b-details{
+          float:left;
+          width:1216px;
+          height:730px;
+          background-color: white;
+    
+      }
+      .b-header{
+          width:100%;
+          height:100px;
+          box-sizing: border-box;
+          border-bottom: 1px solid grey;
+          background-color:rgb(0, 0, 19);
+      }
+      .b-h{
+          padding-top:25px;
+          text-align: center;
+          color:white;
+          font-family: cursive;
+          font-weight: bolder;
+      }
+      small{
+          font-size: 20px;
+      }
+      .fa-search{
+          font-size:24px;
+      }
+      .s-input{
+          padding-top:0;
+          width:100px;
+          height:30px;
+          transition: width 0.5s ease;
+          border-radius: 5px;
+          box-shadow: 3px 3px 5px grey;
+          border:none;
+          outline:none;
+      }
+      .s-input:focus{
+          width:300px;
+          outline:none;
+      }
+      .s-input::placeholder{
+          font-size:20px;
+          font-weight: lighter;
+          padding:5px;
+      }
+      .a-icons{
+          float:right;
+          padding:28px;
+          color:white;
+          font-size:30px;
+      }
+      .a-header{
+          width:100%;
+          height:80px;
+          color:white;
+          text-align: center;
+          box-sizing: border-box;
+      }
+      .fa-user{
+          color:white;
+          font-size:30px;
+          padding:15px;
+      }
+      .a-h1{
+          padding:20px;
+          font-size:70px;
+      }
+      .ia{
+          color:white;
+      }
+      .a-body{
+          margin-top:120px;
+          color:white;
+          width:100%;
+          height:620px;
+          box-sizing: border-box;
+      }
+      .a-path{
+          width:100%;
+          height:58px;
+          box-sizing: border-box;
+          padding-top:14px;
+          border-bottom: 1px solid black;
+      }
+      .aa-path{
+          padding:20px 15px;
+          border-right: 1px solid black;
+          height:5px;
+          width:30px;
+          font-weight: bolder;
+          text-shadow: 2px 2px 5px #333;
+          cursor: pointer;
+          font-size: 18px;
+      }
+      .aa-path:hover{
+          
+          color:blue;
+      }
+      .ab-d{
+          margin:35px;
+          width:1120px;
+          height:500px;
+          background-color: rgb(231, 227, 227);
+          box-shadow: 3px 3px 5px #333;
+          box-sizing: border-box;
+      }
+      .ab-d1{
+          width:100%;
+          height:80px;
+          background-color: rgb(211, 202, 202);
+          box-sizing: border-box;
+          padding-top:24px;
+          font-weight: bolder;
+          font-size: 18px;
+         
+      }
+      .ab-d2{
+          padding:23px;
+          cursor: pointer;
+      }
+      .ab-d2:hover{
+          color:brown;
+          text-decoration: underline;
+      }
+      .ab-h{
+          text-align: center;
+          color:red;
+          opacity:0.6;
+          margin-top:180px;
+      }
+      /* account lists*/
+     .a-ul{
+         margin:0;
+         padding:0;
+         list-style-type:none;
+     }
+     .a-li{
+         padding:25px 50px;
+         font-size:17px;
+         border-top:1px solid grey;
+         font-weight: bolder;
+         cursor: pointer;
+     }
+     .a-li:hover{
+         padding-left:47px;
+         text-shadow: 3px 3px 10px #333;
+     }
+     .ia{
+         padding:0;
+         cursor: pointer;
+         font-weight: lighter;
+     }
+     .iab{
+         padding:0;
+         cursor: pointer;
+         font-weight: bolder;
+     }
+     .log{
+         text-decoration:none;
+         color:white;
+         font-size:bloder;
+     }
+     .log:hover{
+         text-decoration: none;
+         color:white;
+     }
+    </style>
+</head>
+<body ng-app>
+    <div class="head" id="demo1">
+        <ul class="address">
+            <li class="add-li"><i class="fa fa-phone"><a href="#" class="numb"> &nbsp; 91+ 9989415899,9912345678</a></i></li>
+            <li class="add-li"><i class="fa fa-envelope"><a href="#" class="numb">&nbsp; Vineethganagoni@gmail.com</a></i></li>
+            <li class="add-li"><i class="fa fa-address-card"><a href="#" class="numb">&nbsp; Bussapur,Siddipet,Telangana</a></i></li>
+        </ul>
+        <ul class="address1">
+          <li  class="add-li"><a href="facebook.com" class="icon"><i class="fa fa-facebook"></i></a></li>
+          <li  class="add-li"><a href="instagram.com" class="icon"><i class="fa fa-instagram"></i></a></li>
+          <li  class="add-li"><a href="twitter.com" class="icon"><i class="fa fa-twitter"></i></a></li>
+          <li  class="add-li"><a href="google.com" class="icon"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+    </div>
+    <nav class="navbar1" >
+        <ul class="navbar-nav1">
+           <li class="nav-item1"><a href="#" class="nav-link1">HOME</a></li>
+           <li class="nav-item1"><a href="#demo2" class="nav-link1">ABOUT US</a></li>
+           <li class="nav-item1"><a href="#demo3" class="nav-link1">SERVICES</a></li>
+           <li class="nav-item1"><a href="#demo4" class="nav-link1">GALLERY</a></li>
+           <li class="nav-item1"><a href="#demo5" class="nav-link1">CONTACT US</a></li>
+           <li class="nav-item1"><a href="#book" class="nav-link1">BOOK NOW</a></li>
+           <li class="nav-item1"><a href="#demo" class="nav-link1" onclick="myF();">REGISTER NOW</a></li>
+           <li class="nav-item1"><a href="#" class="nav-link1" onclick="myMenu();"><i class="fa fa-bars"></i></a></li>
+        </ul>
+    </nav>
+    <span class="logo"> <i class="fa fa-bed"></i>HosTeL</span>
+    <div class="carousel slide" id="crsl" data-ride="carousel">
+        <div class="carousel-inner">
+            <ul class="carousel-indicators">
+                <li data-target="#crsl" data-slide-to="0"></li>
+                <li data-target="#crsl" data-slide-to="1"></li>
+                <li data-target="#crsl" data-slide-to="2"></li>
+                <li data-target="#crsl" data-slide-to="3"></li>
+                <li data-target="#crsl" data-slide-to="4"></li>
+                <li data-target="#crsl" data-slide-to="5"></li>
+                <li data-target="#crsl" data-slide-to="6"></li>
+              </ul>
+            <div class="carousel-item active">
+                 <img src="C:/Users/vidya/Desktop/images/h3.jpg" alt="5" width="100%" height="600">
+                <div class="h1"><h1 class="heading">LUXURY ROOMS</h1>
+                    <p><i class="para">Decorated room,proper air condition</i></p>
+                    <button class="book" onclick="myF();">REGISTER NOW</button>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="C:/Users/vidya/Desktop/images/h8.jpg" alt="5" width="100%" height="600">
+                <div class="h1"><h1 class="heading">Single-Bed</h1></div>
+           </div>
+           <div class="carousel-item ">
+            <img src="C:/Users/vidya/Desktop/images/w1.jpg" alt="5" width="100%" height="600">
+            <div class="h1"><h1 class="heading">Wash Rooms</h1></div>
+          </div>
+          <div class="carousel-item ">
+            <img src="C:/Users/vidya/Desktop/images/h5.jpg" alt="5" width="100%" height="600">
+            <div class="h1"><h1 class="heading">Four-sharing</h1></div>
+          </div>
+          <div class="carousel-item ">
+            <img src="C:/Users/vidya/Desktop/images/h9.jpg" alt="5" width="100%" height="600">
+            <div class="h1"><h1 class="heading">Living Room</h1></div>
+          </div>
+          <div class="carousel-item ">
+            <img src="C:/Users/vidya/Desktop/images/mess3.jpeg" alt="5" width="100%" height="600">
+            <div class="h1"><h1 class="heading" style="color:white;">Mess</h1></div>
+          </div>
+          <div class="carousel-item ">
+            <img src="C:/Users/vidya/Desktop/images/gr1.png" alt="5" width="100%" height="600">
+            <div class="h1"><h1 class="heading" style="color:red;">Play-Ground</h1></div>
+          </div>
+            <a href="#crsl" class="carousel-control-prev" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+            <a href="#crsl" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="menu-header">
+            <span class="close4" onclick="myC4();">&times;</span>
+            <h3 class="menu-title">HosTeL Timings && Items</h3>
+        </div>
+              <div class="menu-items" id="mi">
+                  <table class="menu-table">
+                      <tr class="menu-tr">
+                          <th class="menu-th">Days</th>
+                          <th class="menu-th">Break Fast<br><p class="tms">(7:00AM t0 8:00 AM )</p></th>
+                          <th class="menu-th">Lunch<p class="tms">(12:00AM t0 2:00 PM )</p></th>
+                          <th class="menu-th">Snacks<p class="tms">(4:30 PM t0 5:30 PM )</p></th>
+                          <th class="menu-th">Dinner<p class="tms">(7:30 PM t0 9:30 PM )</p></th>
+                      </tr>
+                      <tr class="menu-tr">
+                            <td class="menu-td">Sunday</td>
+                            <td class="menu-td">Chapathi,Alu chutney,Milk,Tea</td>
+                            <td class="menu-td">Chicken Biryani</td>
+                            <td class="menu-td">Milk,Tea,Biscuits</td>
+                            <td class="menu-td">Roti,Chicken curry,Plain rice,curd,pickels</td>
+                      </tr>
+                      <tr class="menu-tr">
+                        <td class="menu-td">Monday</td>
+                        <td class="menu-td">Idly,chutney,samber,vadai,Milk,Tea</td>
+                        <td class="menu-td">Tomato curry,Rasam,curd</td>
+                        <td class="menu-td">Milk,Tea,Bun</td>
+                        <td class="menu-td">Sambber,Ladiesfinger curry,Pickels</td>
+                      </tr>
+                      <tr class="menu-tr">
+                        <td class="menu-td">Tuesday</td>
+                        <td class="menu-td">Dosa,chutney,samber,Tomato rice,Milk,Tea</td>
+                        <td class="menu-td">cabbage curry,Rasam,curd</td>
+                        <td class="menu-td">Milk,Tea,Bread</td>
+                        <td class="menu-td">Sambber,Brinjal,curd,Pickels</td>
+                      </tr>
+                      <tr class="menu-tr">
+                        <td class="menu-td">Wednesday</td>
+                        <td class="menu-td">Bonda,chutney,samber,Tomato rice,Milk,Tea</td>
+                        <td class="menu-td">cauliflower curry,Rasam,curd</td>
+                        <td class="menu-td">Milk,Tea,chips</td>
+                        <td class="menu-td">Sambber,Egg curry,curd,Pickels</td>
+                      </tr>
+                      <tr class="menu-tr">
+                        <td class="menu-td">Thursday</td>
+                        <td class="menu-td">uttappa,chutney,samber,kitchedi,Milk,Tea</td>
+                        <td class="menu-td">palkura curry,Rasam,curd</td>
+                        <td class="menu-td">Milk,Tea,Miture</td>
+                        <td class="menu-td">Sambber,Egg curry,curd,Pickels</td>
+                      </tr>
+                      <tr class="menu-tr">
+                        <td class="menu-td">Firday</td>
+                        <td class="menu-td">upma,chutney,samber,kitchedi,Milk,Tea</td>
+                        <td class="menu-td">Pappu ,Rasam,curd</td>
+                        <td class="menu-td">Milk,Tea,friuts</td>
+                        <td class="menu-td">Sambber,cauliflower,curry,Pickels</td>
+                      </tr>
+                      <tr class="menu-tr">
+                        <td class="menu-td">Saturday</td>
+                        <td class="menu-td">Puri,chutney,samber,kitchedi,Milk,Tea</td>
+                        <td class="menu-td">sambber,curd,pickels</td>
+                        <td class="menu-td">Milk,Tea,friuts</td>
+                        <td class="menu-td">Sambber,Egg curry,Pickels</td>
+                      </tr>
+                  </table>
+        </div>
+    </div>
+    <div class="popup" id="pop">
+        <div class="popup-box">
+              <div class="popup-header">
+                  <h2 class="header">Register Now</h2>
+                     <span class="cls" onclick="myC();">&times;</span>
+               </div>
+               <div class="popup-body">
+                    <table class="p-tb">
+                        <tr class="p-tr"><td p-td><label for="fname" class="p-lb">First Name:</label><br><input type="text" placeholder="First Name" id="p-in" class="p-in" oninput="myFF()"></td></tr>
+                        <tr class="p-tr"><td p-td><label for="lname" class="p-lb">Last Name:</label><br><input type="text" placeholder="Last Name" id="p-in1" class="p-in" oninput="myFF()" ></td></tr>
+                        <tr class="p-tr"><td p-td><label for="lname" class="p-lb">E-mail:</label><br><input type="email" placeholder="Enter Email" id="p-in2" class="p-in"></td></tr>
+                        <tr class="p-tr"><td p-td><label for="lname" class="p-lb">Create Password:</label><br><input type="password" placeholder="Enter Password" id="p-in3" class="p-in"></td></tr><span class="eye" ><i class="fa fa-eye" aria-hidden="true" onclick="myEye();" ></i></span>
+                        <tr class="p-tr"><td p-td><label for="lname" class="p-lb">Confirm Password:</label><br><input type="password" placeholder="Re-Enter Password" id="p-in4" class="p-in"></td></tr><span class="eye1"><i class="fa fa-eye"  onclick="myEye1();"></i></span>
+                    </table>
+                    <center>
+                        <br>
+                        <button class="reg" onclick="regvad();">Register</button>
+                        <br><br><br>
+                    <p><i>
+                        If you are already Registered?then
+                         <a href="file:///C:/Users/vidya/Desktop/Projects/HostelLogin.html">Login?</a></i>
+                    </p>
+                    </center>
+               </div>
+        </div>
+    </div>
+
+    <div class="account" id="acut">
+      <div class="a-details">
+           <div class="a-header">
+               <h1 class="a-h1"><span class="fa fa-user-circle"></span></h1>
+               <p class="iab" id="pin" ></p>
+               <p class="ia">Edit Profile &nbsp;<i class="fa fa-edit"></i></p>
+           </div>
+           <div class="a-body">
+           <ul class="a-ul">
+              <li class="a-li"><span class="fa fa-qrcode"></span>&nbsp;&nbsp;&nbsp;&nbsp; Dashboard</li>
+              <li class="a-li"><span class="fa fa-link"></span>&nbsp;&nbsp;&nbsp;&nbsp;Shortscuts</li>
+              <li class="a-li"><span class="fa fa-steam"></span>&nbsp;&nbsp;&nbsp;&nbsp;Overview</li>
+              <li class="a-li"><span class="fa fa-newspaper-o"></span>&nbsp;&nbsp;&nbsp;&nbsp;Events</li>
+              <li class="a-li"><span class="fa fa-question-circle"></span>&nbsp;&nbsp; &nbsp;&nbsp;About</li>
+              <li class="a-li"><span class="fa fa-cogs"></span>&nbsp;&nbsp; &nbsp;&nbsp;Settings</li>
+              <li class="a-li" onclick="myLog();"><a href="file:///C:/Users/vidya/Desktop/Projects/HostelWebsite.html#demo" class="log"><span class="fa fa-sign-out"></span>&nbsp;&nbsp;&nbsp;&nbsp;Logout</a></li>
+           </ul>
+           </div>
+      </div>
+      <div class="b-details">
+           <div class="b-header">
+               <p class="a-icons"><input type="text" placeholder="search..." class="s-input">&nbsp; <i class="fa fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-shopping-cart"></i></p>
+               <h1 class="b-h">HosTeL<small>.in</small> </h1>
+           </div>
+           <div class="a-path">
+            <p>  <span class="aa-path">Booking</span> <span class="aa-path">Reviews</span> <span class="aa-path">My Account</span></p>
+           </div>
+           <div class="ab-d">
+                 <div class="ab-d1">
+                     <p><span class="ab-d2">All Bookings</span> <span class="ab-d2">Future Booking</span><span class="ab-d2">Past Booking</span>
+                        <span class="ab-d2"> cancelled Bookings</span>
+                    </p>
+                 </div>
+                 <h1 class="ab-h"><i  class="fa fa-thumbs-down"></i> You have nothing Booked at all !</h1>
+           </div>
+      </div>
+  </div>
+        
+    <div class="about" id="demo2">
+          <div class="about-header">
+                About Us
+                <button class="back"><i class="fa fa-arrow-left"></i> <a href="#demo1" class="back1">back</a></button>
+          </div>
+          <div class="about-body">
+                 <div class="us">
+                     <img src="C:/Users/vidya/Desktop/images/ceo6.jpg" alt="" width="100%" height="200">
+                     <h2 class="man">Deepak Goud</h2>
+                     <p class="man1">CEO & Founder</p>
+                     <p class="man1">Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur..<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                 </div>
+                 <div class="us">
+                    <img src="C:/Users/vidya/Desktop/images/ceo5.jpg" alt="" width="100%" height="200"> 
+                    <h2 class="man">Harika</h2>
+                    <p class="man1">Branch Manager</p>
+                    <p class="man1">Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur..<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                 </div>
+                 <div class="us">
+                    <img src="C:/Users/vidya/Desktop/images/ceo3.jpeg" alt="" width="100%" height="200">
+                    <h2 class="man1">Vineeth Goud</h2>
+                    <p class="man">Owner</p>
+                    <p class="man1">Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur..<br>
+                        Lorem ipsum dolor sit amet consectetur.<br>
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                 </div> 
+          </div>
+    </div>
+    <div class="services" id="demo3">
+         <div class="services-header">
+              Services
+         </div>
+         <div class="services-items">
+              <div class="services-heading"><h2>1.Basic Safety ,Security Feature & Lockers</h2>
+             <p class="services-para">Regardless of where I sleep, whether it’s a hotel, a hostel, an AirBnb, or even my own home, I want to feel safe. It’s non-negotiable. <br>When booking a hostel, keep your eyes peeled for what people have said about<br> the building’s security features. Try to find out:.</p>
+            </div>
+               <img src="C:/Users/vidya/Desktop/images/h6.jpg" alt="" width="300" height="180" class="s-img">
+         </div>
+         <div class="services-items">
+            <div class="services-heading"><h2>2.A Shared Kitchen & BreakFast</h2>
+                <p class="services-para">
+                    If you’re travelling on a budget, having the ability to cook your own meals can help you save quite a bit of money.<br>
+                    Hostel kitchens are also typically busy areas, so they’re great spots to meet other travellers. Smell something delicious?<br>
+                   Does your hostel serve breakfast? Is it already included in the hostel price? Awesome! You just saved some time and money.
+                </p>
+               </div>
+            <img src="C:/Users/vidya/Desktop/images/mess1.jpg" alt="" width="300" height="180" class="s-img">  
+        </div>
+        <div class="services-items">
+            <div class="services-heading"><h2>3.Reasonable Number of Washrooms & Laundry Machines</h2>
+                <p class="services-para">I never really thought too much about the availability of bathrooms in hostels until this summer. <br>I stayed in a couple hostels that had 1 bathroom for around 10-12 people. I can tell you that it didn’t work out so well.<br>
+                    f I have to pack ultra light (oh, you budget airlines) and I know that I’ll be travelling for more than 10 days,<br> I’ll be booking at least 1 hostel with laundry services.</p>
+               </div>
+            <img src="C:/Users/vidya/Desktop/images/w1.jpg" alt="" width="300" height="180" class="s-img">
+        </div>
+        <div class="services-items">
+            <div class="services-heading"><h2>4.All Over WiFi</h2>
+                <p class="services-para">Having consistent wifi throughout an entire hostel building isn’t as critical as having basic security features throughout an entire hostel building,<br> but it’s definitely useful. If you have to work online or have some last minute trip planning to get done,<br> I know exactly how frustrating it get can with a poor wifi signal.</p>
+               </div>
+            <img src="C:/Users/vidya/Desktop/images/wifi1.jpg" alt="" width="300" height="180" class="s-img">
+        </div>
+        <div class="services-items">
+            <div class="services-heading"><h2>5.Availability of Power outlets</h2>
+                <p class="services-para"s>I’d dare say that in this day and age, it’s pretty rare for someone travel without a single electronic device. I’ve usually got around 3 devices <br>on my hands that need daily charging (#blogginglifeyo).<br> However, not all facilities can keep up with the demand for outlets. I’ve stayed in my fair share of establishments that only have one outlet for 8 people.</p>
+               </div>
+            <img src="C:/Users/vidya/Desktop/images/charger.jpg" alt="" width="300" height="180" class="s-img">
+        </div>
+    </div>
+    <div class="gallery" id="demo4">
+        <div class="gallery-header">Gallery
+            <button class="back"><i class="fa fa-arrow-left"></i> <a href="#demo1" class="back1">back</a></button>
+        </div>
+           <div class="gallery-cards">
+               <div class="g-card">
+                   <img src="C:/Users/vidya/Desktop/images/chef1.jpg" alt="" class="g-img">
+                   <h3 class="g-header">Srinath</h3>
+                   <p class="g-para">chef Master</p>
+               </div>
+               <div class="g-card">
+                <img src="C:/Users/vidya/Desktop/images/chef3.jpg" alt="" class="g-img">
+                <h3 class="g-header">Sai Leela</h3>
+                <p class="g-para">chef Master</p>
+               </div>
+               <div class="g-card">
+                <img src="C:/Users/vidya/Desktop/images/chef2.jpg" alt="" class="g-img">
+                <h3 class="g-header">Pavan</h3>
+                <p class="g-para">chef Master</p>
+               </div>
+               <div class="g-card">
+                <img src="C:/Users/vidya/Desktop/images/chef4.jpg" alt="" class="g-img">
+                <h3 class="g-header">Priyanka</h3>
+                <p class="g-para">chef Master</p>
+               </div>
+               <div class="g-card">
+                <img src="C:/Users/vidya/Desktop/images/h8.jpg" alt="" class="g-img">
+                <h3 class="g-header">Single-bed</h3>
+                <p class="g-para">6000RS per Month
+                <a href="file:///C:/Users/vidya/Desktop/Projects/single%20beded.html#">View>>></a>
+                </p>
+               </div>
+               <div class="g-card">
+                <img src="C:/Users/vidya/Desktop/images/h1.jpg" alt="" class="g-img">
+                <h3 class="g-header">Two-Sharing</h3>
+                <p class="g-para">12000Rs per Month
+                    <a href="file:///C:/Users/vidya/Desktop/Projects/Two-sharing.html">View>>></a>
+                </p>
+               </div>
+               <div class="g-card">
+                <img src="C:/Users/vidya/Desktop/images/h7.jpg" alt="" class="g-img">
+                <h3 class="g-header">Four-Sharing</h3>
+                <p class="g-para">20000RS per Month
+                    <a href="file:///C:/Users/vidya/Desktop/Projects/four%20sharing.html#book">View>>></a>
+                </p>
+               </div>
+               <div class="g-card">
+                <img src="C:/Users/vidya/Desktop/images/h3.jpg" alt="" class="g-img">
+                <h3 class="g-header">Six-Sharing</h3>
+                <p class="g-para">40000RS per Month
+                    <a href="file:///C:/Users/vidya/Desktop/Projects/six%20sharing.html">View>>></a>
+                </p>
+               </div>
+           </div>
+    </div>
+    <div class="booking" id="book">
+        <div class="booking-header">
+            Book Now
+            <button class="back"><i class="fa fa-arrow-left"></i> <a href="#demo1" class="back1">back</a></button>
+        </div>
+        <div class="booking-body">
+            <div>
+             <p class="b-para">First Name:<br><input type="text"  placeholder="First Name" class="b-input" id="fName"></p>
+             <p class="b-para">Last Name:<br><input type="text"  placeholder="Last Name" class="b-input" id="lName"></p>
+             <p class="b-para">Email:<br><input type="email" placeholder="Enter Email" class="b-input" id="email"></p>
+             </div>
+             <div>
+             <p class="b-para1">Room Type:<br><input type="radio" name="room" id="sin"> Single-Bed &nbsp;<input type="radio" name="room" id="two"> Two-sharing
+                &nbsp;<input type="radio" name="room" id="four"> Four-sharing  &nbsp;<input type="radio" name="room" id="six"> Six-sharing</p>
+                <p class="b-para1">Arriving:<br>
+                Date : <input type="date" class="dt" id="date1">&nbsp; Time : <input type="time" class="dt" id="time1"></p>
+                <p class="b-para1">Departure:<br>
+                    Date : <input type="date" class="dt" id="date2">&nbsp; Time : <input type="time" class="dt" id="time2"></p>
+                <p class="b-para1">Special Request:<br><textarea name="" id="" cols="50" rows="2"></textarea></p>
+                <center><button class="book1" onclick="myV();">Book Now</button></center>
+             </div>
+       </div>
+       <div class="contact" id="demo5">
+            <div class="contact-header">
+               Contact Us
+               <button class="back"><i class="fa fa-arrow-left"></i> <a href="#demo1" class="back1">back</a></button>
+            </div>
+              <div class="contact-body">
+                  <div class="contact-form">
+                      <center>
+                        <div class="c-contact">
+                            <br>
+                            <form action="" class="form">
+                                <table class="tf">
+                                    <tr><td class="td">
+                                <label for="lname" class="lab">Full Name</label><br>
+                                <input type="text" id="fname" name="fname" placeholder="Your full name.." class="conf" >
+                                  </td> </tr>
+                                  <tr><td class="td">
+                                <label for="lname" class="lab">E-mail</label><br>
+                                <input type="email" id="email1" name="email1" placeholder="Your E-mail.." class="conf" >
+                                </td> </tr>
+                                <tr><td class="td">
+                                <label for="sub" class="lab">Message</label><br>
+                                <textarea name="" id="text" cols="52" rows="4"></textarea>
+                                 </td> </tr>
+                                 <tr>
+                                     <td>&nbsp;&nbsp;<input type="button " value="submit" id="btn" class="conf1" onclick="myM();" readonly></td>
+                                 </tr>
+                                </table>
+                            </form>
+                        </div>
+                         
+                      </center>
+                  </div>
+              </div>
+              <div class="contact-footer">
+                 <center>
+                     <h3 class="rate">HosTeL Rating....</h3>
+                     <h3 class="rate"><i class="fa fa-star" id="s1" onclick="myS1();"></i>&nbsp;&nbsp;
+                        <i class="fa fa-star" id="s2" onclick="myS2();"></i>&nbsp;&nbsp;
+                        <i class="fa fa-star" id="s3" onclick="myS3();"></i>&nbsp;&nbsp;
+                        <i class="fa fa-star" id="s4" onclick="myS4();"></i>&nbsp;&nbsp;
+                        <i class="fa fa-star" id="s5" onclick="myS5();"></i></h3>
+                        <button onclick="myR()" class="done">Done</button>
+                 </center>
+              </div>
+       </div>
+       <script>
+           /* contact us code*/
+           function myM(){
+                  var fullname = document.getElementById("fname").value;
+                  var email = document.getElementById("email1").value;
+                  var text = document.getElementById("text").value;
+                  if(fullname=="" || email=="" || text=="")
+                  {
+                    alert("please fill out this field");
+                  }else{
+                      alert("Your details are submited!..");
+                  }
+           }
+           /* hostel rating code*/
+           function myS1(){
+               var s1 = document.getElementById("s1");
+               if(s1.style.color=="gold"){
+                   s1.style.color="white";
+                } else{
+                   s1.style.color="gold";
+               }
+           }
+           function myS2(){
+               var s2 = document.getElementById("s2");
+               if(s2.style.color=="gold"){
+                   s2.style.color="white";
+                } else{
+                   s2.style.color="gold";
+               }
+           }
+           function myS3(){
+               var s3 = document.getElementById("s3");
+               if(s3.style.color=="gold"){
+                   s3.style.color="white";
+                } else{
+                   s3.style.color="gold";
+               }
+           }
+           function myS4(){
+               var s4 = document.getElementById("s4");
+               if(s4.style.color=="gold"){
+                   s4.style.color="white";
+                } else{
+                   s4.style.color="gold";
+               }
+           }
+           function myS5(){
+               var s5 = document.getElementById("s5");
+               if(s5.style.color=="gold"){
+                   s5.style.color="white";
+                } else{
+                   s5.style.color="gold";
+               }
+           }
+           function myR(){
+               alert("Thankyou!!!!!...");
+           }
+           /* register password code*/
+           function myEye(){
+               var pass = document.getElementById("p-in3");
+               if(pass.type=="text"){
+                   pass.type="password";
+               }else{
+                   pass.type="text";
+               }
+           }
+           function myEye1(){
+               var pass1 = document.getElementById("p-in4");
+               if(pass1.type=="text"){
+                   pass1.type="password";
+               }else{
+                   pass1.type="text";
+               }
+           }
+           /*register validation*/
+           function regvad(){
+               var name = document.getElementById("p-in").value;
+               var name1 = document.getElementById("p-in1").value;
+               var email2 = document.getElementById("p-in2").value;
+               var cp = document.getElementById("p-in3").value;
+               var cfp = document.getElementById("p-in4").value;
+               if(name==""){
+                   alert("Please Enter First Name");
+               }else if(name1==""){
+                   alert("Please Enter Last Name");
+               }else if(email2==""){
+                   alert("Please Enter Email");
+               }else if(cp==""){
+                   alert("Please create Password");
+               }else if(cp.length< 8){
+                 alert('Password must contain 8 characters');
+               }else if(cp.search(/[@#$%^&*<>?!~]/)==-1){
+                   alert('Password must contain atleast one special character');
+               }else if(cp.search(/[0-9]/)==-1){
+                   alert('Password must contain atleast one Number');
+               }else if(cp.search(/[A-Z]/)==-1){
+                   alert("Password must contain one Capital letter");
+               } else if(cfp==""){
+                   alert("Please Re-Enter Password");
+               }else if(cp != cfp ){
+                   alert("Password doesn't match");
+               }else{
+                   alert("You are registered in HosTeL.com");
+                  document.getElementById('acut').style.display='block';
+                  document.getElementById('acut').style.opacity='1';
+               }
+           }
+           function myFF(){
+               var x = document.getElementById('p-in').value;
+               var y = document.getElementById('p-in1').value;
+               document.getElementById('pin').innerHTML= x +" "+ y;
+           }
+           function myLog(){
+                 confirm("Are You sure ? Do you want To Logout ");
+                  document.getElementById('acut').style.display='none';
+                  document.getElementById('acut').style.opacity='0';
+                  alert("you are singing out");
+                  document.getElementById('pop').style.display="none";
+           }
+       </script>
+</body>
+</html>

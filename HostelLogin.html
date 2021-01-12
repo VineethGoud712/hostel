@@ -1,0 +1,272 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+            user-select: none;
+        }
+        .container{
+            background:url("C:/Users/vidya/Desktop/images/hostel.jpg") no-repeat center;
+            background-size:cover;
+            width:100%;
+            height:720px;
+            position:relative;
+        }
+        .div{
+          position: absolute;
+          top:0;
+          width:100%;
+          left:0;
+          height:100%;
+          background-color: rgb(0,0,0);
+          background-color: rgb(0,0,0,0.5);
+          position: relative;
+        }
+        .text{
+            text-align: center;
+            font-size: 70px;
+            color:cornsilk;
+            font-weight:bolder;
+            letter-spacing: 1px;
+        }
+        label{
+            font-size: 27px;
+            font-weight:bolder;
+        }
+        input{
+            width:350px;
+            height:35px;
+            box-shadow: 3px 3px 8px #333;
+            border:1px solid green;
+        }
+        input::placeholder{
+            font-size:16px;
+            color:grey;
+            letter-spacing: 2px;
+            padding:5px;
+        }
+        
+        td{
+            padding:5px;
+        }
+        p{
+            font-size: 18px;
+            color:red;
+        }
+        input[type="submit"]{
+            background-color: blue;
+            color:white;
+            font-weight: bolder;
+            text-align: center;
+            font-size:20px;
+            border-radius:5px;
+            border:none;
+            cursor: pointer;
+        }
+        input:focus{
+            outline:none;
+        }
+        hr.a{
+            float:left;
+            width:500px;
+            color:grey;
+            background-color:grey;
+            margin-left:200px;
+        }
+        hr.b{
+            float:right;
+            width:500px;
+            color:grey;
+            background-color:grey;
+            margin-right: 200px;
+        }
+        .p i{
+            padding:50px;
+            cursor: pointer;
+        }
+        span.l{
+            color:white;
+            font-size:20px;
+        }
+        .fa-facebook{
+           font-size:40px;
+           color:blue;
+           width:50px;
+           height:50px;
+        }
+        .fa-instagram{
+           font-size:40px;
+           color:orangered;
+           width:50px;
+           height:50px;
+        }
+        .fa-twitter{
+           font-size:40px;
+           color:rgb(19, 204, 250);
+           width:50px;
+           height:50px;
+        }
+        .fa-google{
+           font-size:40px;
+           color:brown;
+           width:50px;
+           height:50px;
+        }
+        .fa-youtube{
+           font-size:40px;
+           color:red;
+           width:50px;
+           height:50px;
+        }
+        .fa:hover{
+            text-shadow: 3px 3px 5px #333;
+
+        }
+        .cancel{
+            float:right;
+            margin-right:40px;
+            width:150px;
+            height:45px;
+            color:black;
+            font-weight:bolder;
+            font-size:25px;
+            padding:5px;
+            text-align: center;
+            background-color: brown;
+            box-shadow: 3px 3px 5px #333;
+        }
+        .cancel a{
+            text-decoration: none;
+            color:black;
+        }
+        .fa-eye-slash{
+            position: absolute;
+            top:257px;
+            left:908px;
+            cursor: pointer;
+        }
+        .loading{
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background-color: rgb(123, 166, 247);
+            position:absolute;
+            z-index:1;
+            display:none;
+        }
+        .icon{
+            margin:250px;
+        }
+        .fa-spinner{
+            transition:0.5 ease;
+            font-size:50px;
+            font-weight: bolder;
+        }
+        .v{
+            margin-top:200px;
+            font-size:30px;
+            font-weight: bolder;
+        }
+        .em{
+            font-weight: lighter;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="div">
+        <h1 class="text"><i class="fa fa-bed"></i>&nbsp;HosTeL</h1>
+        <center>
+     <table>
+    <tr><td> <label for="" class="em">
+         Email:</label><br><input type="email"  name="email"  placeholder="Enter Email" id="c"></td></tr>
+    <tr><td><p id="demo2"></p></td></tr>
+    <tr><td> <label for="" class="em"> Password:</label><br><input type="Password"  name="password"  placeholder="Enter Password" id="d"></td></tr>
+    <tr><td><p id="demo3"></p></td></tr>
+    <tr><td><input type="submit"  value="Login" onclick="myF()"></td></tr>
+    </table>
+    <br>
+    <hr class="a"><span class="l">Login with</span><hr class="b">
+    <p class="p"><i class="fa fa-facebook" ></i><i class="fa fa-instagram"></i><i class="fa fa-twitter"></i>
+        <i class="fa fa-google"></i><i class="fa fa-youtube" class="icon"></i></p>
+        <button class="cancel"><a href="file:///C:/Users/vidya/Desktop/Projects/HostelWebsite.html">Cancel</a></button>
+    </center>
+    </div>
+    <i class="fa fa-eye-slash" onclick="myEye();" id="ey"></i>
+ </div>
+ <div class="loading" id="l">
+     <center>
+      <div class="icon">
+          <span class="v"><i class="fa fa-spinner fa-spin"></i> verifying your account...</span><br><br>
+          <i>Please wait few seconds..</i>
+      </div>
+      </center>
+ </div>
+    <script>
+        /*validation code*/
+        function myF(){
+            var email = document.getElementById("c").value;
+            var pass = document.getElementById("d").value;
+               if(email==""){
+                document.getElementById("demo2").innerHTML="*fill out the filed";
+                document.getElementById("demo2").style.color="red";
+                document.getElementById("c").style.border="2px solid red";
+                email.focus();
+                return false;
+             }else if(pass==""){
+                document.getElementById("demo3").innerHTML="*fill out the filed";
+                document.getElementById("demo3").style.color="red";
+                document.getElementById("d").style.border="2px solid red";
+                pass.focus();
+                return false;
+             }else if(pass.length<8){
+                document.getElementById("demo3").innerHTML="*password must be contain 8 characters";
+                document.getElementById("demo3").style.color="red";
+                document.getElementById("d").style.border="2px solid red";
+                pass.focus();
+                return false;
+            }else if(pass.search(/[A-Z]/)==-1){
+                document.getElementById("demo3").innerHTML="*password must contaain atleast one captial letter";
+                document.getElementById("demo3").style.color="red";
+                document.getElementById("d").style.border="2px solid red";
+                pass.focus();
+                return false;
+            }else if(pass.search(/[0-9]/)==-1){
+                document.getElementById("demo3").innerHTML="*password must contain aleast one number";
+                document.getElementById("demo3").style.color="red";
+                document.getElementById("d").style.border="2px solid red";
+                pass.focus();
+                return false;
+            }else if(pass.search(/[!@#$%^&*><?]/)==-1){
+                document.getElementById("demo3").innerHTML="*password must contain atleast one special character";
+                document.getElementById("demo3").style.color="red";
+                document.getElementById("d").style.border="2px solid red";
+                pass.focus();
+                return false;
+            }else {
+                document.getElementById('l').style.display="block";
+               
+            }
+
+        }
+        /*eye code*/
+        function myEye(){
+            var pas1 = document.getElementById("d");
+            if(pas1.type=="password"){
+                pas1.type="text";
+            }else{
+                pas1.type="password";
+            }
+        }
+    </script>
+</body>
+
+</html>

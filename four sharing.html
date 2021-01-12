@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+        }
+        .back{
+            float:left;
+            width:110px;
+            height:40px;
+            font-size: 20px;
+            color:white;
+            background-color:black;
+            margin:20px;
+            border:none;
+            outline:none;
+            box-shadow: 2px 2px 5px white;
+            border-radius:10px;
+        }
+        .back1{
+            color:white;
+            font-weight: bold;
+        }
+        .stock{
+            width:100%;
+            height:30px;
+            background-color:rgb(235, 61, 61);
+            text-align: center;
+            color:white;
+            font-size: 18px;
+            font-style: italic;
+            padding:5px;
+            word-spacing: 3px;
+            position:fixed;
+        }
+        h1{
+            text-align: center;
+            font-size: 60px;
+            color:black;
+            text-shadow: 2px 2px 5px #333;
+        }
+        .container{
+            display:flex;
+            flex-wrap: wrap;
+            width:100%;
+            height:1400px;
+        }
+        .bed{
+            width:550px;
+            height:400px;
+            box-shadow: 3px 3px 5px #333;
+            margin:10px 95px;
+        }
+        .bed:hover{
+            box-shadow: 4px 4px 10px green,5px 5px 10px yellow;
+        }
+        .g-para{
+            text-align: center;
+            font-size:30px;
+        }
+        .img{
+            width:100%;
+            height:300px;
+        }
+        .img-a{
+            width:100%;
+            height:300px;
+            opacity:3;
+            filter: blur(3px);
+            position: relative;
+            z-index: -1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="stock"> hurry only 2 left <a href="file:///C:/Users/vidya/Desktop/Projects/HostelWebsite.html">Book Now</a></div>
+    <br><br><br>
+    <button class="back"><i class="fa fa-arrow-left"></i> <a href="file:///C:/Users/vidya/Desktop/Projects/HostelWebsite.html" class="back1">back</a></button>
+    <h1>Four-sharing Beds</h1>
+    <div class="container">
+        <div class="bed">
+            <img src="C:/Users/vidya/Desktop/images/fbed1.jpg" alt="" class="img">
+                <p class="g-para">2000RS per Month
+                    <a href="file:///C:/Users/vidya/Desktop/Projects/HostelWebsite.html" style="color:green">Book Now</a>
+                </p>
+        </div>
+        <div class="bed">
+            <img src="C:/Users/vidya/Desktop/images/fbed2.jpg" alt="" class="img">
+                <p class="g-para">2000RS per Month
+                    <a href="file:///C:/Users/vidya/Desktop/Projects/HostelWebsite.html" style="color:green">Book Now</a>
+                </p>
+        </div>
+        <div class="bed">
+            <img src="C:/Users/vidya/Desktop/images/fbed3.jpg" alt="" class="img-a">
+            <p class="g-para">2000RS per Month
+                <a href="#book" style="color:red">Booked</a>
+            </p>
+        </div>
+        <div class="bed">
+            <img src="C:/Users/vidya/Desktop/images/fbed4.jpg" alt="" class="img-a">
+            <p class="g-para">2000RS per Month
+                <a href="#book" style="color:red">Booked</a>
+            </p>
+        </div>
+        <div class="bed">
+            <img src="C:/Users/vidya/Desktop/images/fbed5.jpg" alt="" class="img-a">
+            <p class="g-para">2000RS per Month
+                <a href="#book" style="color:red">Booked</a>
+            </p>
+        </div>
+        <div class="bed">
+            <img src="C:/Users/vidya/Desktop/images/fbed6.jpg" alt="" class="img-a">
+            <p class="g-para">2000RS per Month
+                <a href="#book" style="color:red">Booked</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
